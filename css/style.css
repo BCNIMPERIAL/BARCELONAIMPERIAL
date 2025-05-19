@@ -49,3 +49,13 @@ main {
   border-radius: 8px; /* 圆角效果 */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 阴影效果 */
 }
+
+.chanpintupian00 img,
+.chanpintupian01 img,
+.chanpintupian02 img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
