@@ -5,6 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>产品中心 - IMPERIAL</title>
   <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    header, footer {
+      background-color: #f2f2f2;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .sidebar {
+      width: 200px;
+      background-color: #f7f7f7;
+      padding: 20px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar li {
+      padding: 10px;
+      cursor: pointer;
+      background-color: #fff;
+      margin-bottom: 5px;
+      border-radius: 5px;
+    }
+
+    .sidebar li:hover {
+      background-color: #e0e0e0;
+    }
+
+    .sidebar li strong {
+      background-color: transparent;
+      cursor: default;
+    }
+
+    .product-display {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .product-item {
+      display: none;
+    }
+
+    .product-item.active {
+      display: block;
+    }
+
+    .product-images {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .product-images img {
+      width: 200px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .spec-card {
+      display: inline-block;
+      background-color: #dcdcdc;
+      padding: 5px 10px;
+      margin: 5px;
+      border-radius: 5px;
+    }
+
+    .brand-tag {
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 14px;
+      color: #fff;
+    }
+
+    .brand-tag.imperial { background-color: #007BFF; }
+    .brand-tag.dragon { background-color: #28a745; }
+    .brand-tag.zen { background-color: #6c757d; }
+    .brand-tag.frame { background-color: #ff9800; }
+
+    .product-description {
+      margin-bottom: 15px;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -17,77 +118,142 @@
     </nav>
   </header>
 
-
-   <div class="chanpintupian00-code">
-
-
-      <img src="images/chanpintupian 00.jpg" alt="产品图片00" width="200" />
-
+  <div class="container">
+    <div class="sidebar">
+      <h2>产品分类</h2>
+      <ul>
+        <li><strong>床垫</strong></li>
+        <li onclick="showProduct('a')">IMPERIAL</li>
+        <li onclick="showProduct('b')">DRAGON CLOUD</li>
+        <li onclick="showProduct('c')">ZEN</li>
+        <li><strong>床架</strong></li>
+        <li onclick="showProduct('frame180')">长度180</li>
+        <li onclick="showProduct('frame190')">长度190</li>
+        <li onclick="showProduct('frame200')">长度200</li>
+      </ul>
     </div>
 
- <div class="chanpintupian01-code">
+  <div class="product-display">
 
-
-      <img src="images/chanpintupian 01.jpg" alt="产品图片01" width="200" />
-
+  <!-- 床垫产品 -->
+  <div id="product-a" class="product-item active">
+    <h2><span class="brand-tag imperial">IMPERIAL</span> 系列</h2>
+    <div class="product-images">
+      <img src="images/chanpintupian00.jpg" alt="IMPERIAL 图1">
+      <img src="images/chanpintupian01.jpg" alt="IMPERIAL 图2">
     </div>
-
-
-<div class="chanpintupian02-code">
-
-
-      <img src="images/chanpintupian 02.jpg" alt="产品图片02" width="200" />
-
+    <div class="product-description">
+      <p>IMPERIAL</p>
+      <p>高硬度支撑，强力承托。<br>
+        该系列床垫主打豪华舒适，采用高硬度记忆泡沫，支持性强。</p>
+      <p>主打硬挺床感，适合习惯硬板床或追求极致支撑力的用户。</p>
     </div>
+    <p>厚度：21 CM / 24 CM<br>长度：190 CM / 200 CM</p>
+    <div>
+      <span class="spec-card">90</span><span class="spec-card">135</span><span class="spec-card">150</span>
+      <span class="spec-card">160</span><span class="spec-card">180</span><span class="spec-card">200</span>
+    </div>
+  </div>
 
-  <main>
-    <h2>系列 A IMPERIAL </h2>
-    <p>厚度：21 CM/ 24CM<br>
-    长度：190 CM/ 200CM<br>
-    宽度可选如下</p><br>
-  
-<li>90 CM</li>
-<li>135 CM</li>
-<li>150 CM</li>
-<li>160 CM</li>
-<li>180 CM</li>
-<li>200 CM</li>
-</ul>
+  <div id="product-b" class="product-item">
+    <h2><span class="brand-tag dragon">DRAGON CLOUD</span> 系列</h2>
+    <div class="product-images">
+      <img src="images/chanpintupian02.jpg" alt="DRAGON CLOUD 图1">
+    </div>
+    <div class="product-description">
+ 
+
+      <p>DRAGON CLOUD</p>
+      <p>偏硬支撑，稳固安心。</p>
+      <p>该系列主打支撑与透气平衡，采用高密度记忆泡沫，使您享受奢华的睡眠体验。</p>
+      <p>提供较强的支撑感，适合喜欢偏硬床感或需要更多承托力的人群。</p>
+    </div>
+    <p>厚度：21 CM / 24 CM<br>长度：190 CM / 200 CM</p>
+    <div>
+      <span class="spec-card">90</span><span class="spec-card">135</span><span class="spec-card">150</span>
+      <span class="spec-card">160</span><span class="spec-card">180</span><span class="spec-card">200</span>
+    </div>
+  </div>
+
+  <div id="product-c" class="product-item">
+    <h2><span class="brand-tag zen">ZEN</span> 系列</h2>
+    <div class="product-images">
+      <img src="images/chanpintupian01.jpg" alt="ZEN 图1">
+    </div>
+    <div class="product-description">
+      <p>ZEN</p>
+      <p>软硬适中，舒适平衡。<br>
+        该系列兼顾支撑力与柔软度，适应性强，追求极简与自然。</p>
+      <p>采用高弹性材料，提供无与伦比的支撑和放松。</p>
+      <p>适合喜欢适中支撑感，追求极致的舒适与放松的人群。</p>
+    </div>
+    <p>厚度：21 CM / 24 CM<br>长度：190 CM / 200 CM</p>
+    <div>
+      <span class="spec-card">90</span><span class="spec-card">135</span><span class="spec-card">150</span>
+      <span class="spec-card">160</span><span class="spec-card">180</span><span class="spec-card">200</span>
+    </div>
+  </div>
+
+  <!-- 床架产品 -->
+  <div id="product-frame180" class="product-item">
+    <h2><span class="brand-tag frame">床架</span> - 长度 180 CM</h2>
+    <div class="product-images">
+      <img src="images/frame180.jpg" alt="床架180CM 图1">
+    </div>
+    <div class="product-description">
+      <p>适用于小型卧室或儿童房的紧凑型设计床架。</p>
+    </div>
+    <div>
+      <span class="spec-card">90</span><span class="spec-card">105</span><span class="spec-card">135</span>
+      <span class="spec-card">150</span><span class="spec-card">160</span><span class="spec-card">150 2T</span>
+      <span class="spec-card">160 2T</span><span class="spec-card">180 2T</span>
+    </div>
+  </div>
+
+  <div id="product-frame190" class="product-item">
+    <h2><span class="brand-tag frame">床架</span> - 长度 190 CM</h2>
+    <div class="product-images">
+      <img src="images/frame190.jpg" alt="床架190CM 图1">
+    </div>
+    <div class="product-description">
+      <p>适合标准卧室使用的常规床架，兼顾舒适与空间利用。</p>
+    </div>
+    <div>
+      <span class="spec-card">90</span><span class="spec-card">105</span><span class="spec-card">135</span>
+      <span class="spec-card">150</span><span class="spec-card">160</span><span class="spec-card">150 2T</span>
+      <span class="spec-card">160 2T</span><span class="spec-card">180 2T</span>
+    </div>
+  </div>
+
+  <div id="product-frame200" class="product-item">
+    <h2><span class="brand-tag frame">床架</span> - 长度 200 CM</h2>
+    <div class="product-images">
+      <img src="images/frame200.jpg" alt="床架200CM 图1">
+    </div>
+    <div class="product-description">
+      <p>加长床架设计，适合高个子或追求更大睡眠空间的用户。</p>
+    </div>
+    <div>
+      <span class="spec-card">90</span><span class="spec-card">105</span><span class="spec-card">135</span>
+      <span class="spec-card">150</span><span class="spec-card">160</span><span class="spec-card">150 2T</span>
+      <span class="spec-card">160 2T</span><span class="spec-card">180 2T</span>
+    </div>
+  </div>
+
+</div>
 
 
-    <h2>系列 B DRAGON CLOUD</h2>
-    <p>厚度：21 CM/ 24CM<br>
-    长度：190 CM/ 200CM<br>
-    宽度可选如下</p><br>
-
-<li>90 CM</li>
-<li>135 CM</li>
-<li>150 CM</li>
-<li>160 CM</li>
-<li>180 CM</li>
-<li>200 CM</li>
-</ul>
-
-
-    <h2>系列 C ZEN</h2>
- <p>厚度：21 CM/ 24CM<br>
-    长度：190 CM/ 200CM<br>
-    宽度可选如下</p><br>
-
-<li>90 CM</li>
-<li>135 CM</li>
-<li>150 CM</li>
-<li>160 CM</li>
-<li>180 CM</li>
-<li>200 CM</li>
-</ul>
-
-
-
-
-  </main>
   <footer>
     <p>&copy; 2025 IMPERIAL</p>
   </footer>
+
+  <script>
+    function showProduct(id) {
+      const items = document.querySelectorAll('.product-item');
+      items.forEach(item => item.classList.remove('active'));
+      const selected = document.getElementById('product-' + id);
+      if (selected) selected.classList.add('active');
+    }
+  </script>
 </body>
 </html>
