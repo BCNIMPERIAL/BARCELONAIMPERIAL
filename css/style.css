@@ -179,4 +179,15 @@ main {
 }
 
 
+.sidebar {
+  transition: transform 0.3s ease;
+}
+
+.sidebar.closed {
+  transform: translateX(-100%);
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
 
