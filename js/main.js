@@ -23,3 +23,26 @@ const handleDrag = (e) => {
 
 // 样式绑定
 <div style={{ width: sidebarWidth + 'px' }}></div>
+
+useEffect(() => {
+  const touchZone = document.getElementById('touch-zone');
+  touchZone.addEventListener('touchstart', handleTouchStart);
+  touchZone.addEventListener('touchmove', handleTouchMove);
+  // 清理
+  return () => {
+    touchZone.removeEventListener('touchstart', handleTouchStart);
+    touchZone.removeEventListener('touchmove', handleTouchMove);
+  };
+}, []);
+
+function handleTouchStart(e) {
+  startX = e.touches[0].clientX;
+}
+
+function handleTouchMove(e) {
+  const deltaX = e.touches[0].clientX - startX;
+  if (deltaX > 30) {
+    // 向右滑动 -> 打开 sidebar
+    setSidebarOpen(true);
+  }
+}
