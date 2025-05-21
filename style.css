@@ -1,0 +1,150 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #f2f2f2;
+  padding: 5px;
+  text-align: center;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 10px;
+  z-index: 999;
+}
+
+
+nav a {
+  margin: 0 1em;
+  text-decoration: none;
+  color: #333;
+}
+
+main {
+  padding: 2em;
+}
+
+/* 微信二维码样式 */
+.wechat-code img {
+  width: 200px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+/* 小红书二维码样式 */
+.xiaohongshu-code img {
+  width: 200px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+.zhuye {
+  text-align: center; /* 图片居中 */
+  margin: 20px auto; /* 外边距 */
+}
+
+.zhuye img {
+  width: 100%; /* 自适应宽度 */
+  max-width: 600px; /* 最大宽度 */
+  height: auto; /* 等比例缩放 */
+  border-radius: 8px; /* 圆角效果 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+}
+
+.chuangdian 01 img,
+.chuangdian 02 img,
+.chuangdian 03 img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #f3f3f3;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.sidebar li:hover {
+  background-color: #ddd;
+}
+
+.product-display {
+  flex: 1;
+  padding: 20px;
+}
+
+.product-item img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.product-description {
+  margin-bottom: 15px;
+  color: #555;
+  line-height: 1.8; /* 增加行距 */
+  font-size: 16px;
+}
+.IMPERIAL 01 img,
+.DRAGONCLOUD 01 img,
+.ZEN 01 img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.product-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.product-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
