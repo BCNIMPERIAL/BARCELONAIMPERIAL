@@ -14,3 +14,12 @@ function showProduct(id) {
 
   document.getElementById(`product-${id}`).style.display = 'block';
 }
+
+const [sidebarWidth, setSidebarWidth] = useState(240);
+
+const handleDrag = (e) => {
+  setSidebarWidth(e.clientX); 
+};
+
+// 样式绑定
+<div style={{ width: sidebarWidth + 'px' }}></div>
