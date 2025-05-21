@@ -50,9 +50,64 @@ main {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 阴影效果 */
 }
 
-.chanpintupian 00 img,
-.chanpintupian 01 img,
-.chanpintupian 02 img {
+.chuangdian 01 img,
+.chuangdian 02 img,
+.chuangdian 03 img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #f3f3f3;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.sidebar li:hover {
+  background-color: #ddd;
+}
+
+.product-display {
+  flex: 1;
+  padding: 20px;
+}
+
+.product-item img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.product-description {
+  margin-bottom: 15px;
+  color: #555;
+  line-height: 1.8; /* 增加行距 */
+  font-size: 16px;
+}
+.IMPERIAL 01 img,
+.DRAGON CLOUD 01 img,
+.ZEN 01 img {
   width: 100%;
   max-width: 600px;
   height: auto;

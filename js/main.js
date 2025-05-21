@@ -7,3 +7,10 @@ export default function Home() {
     </div>
   );
 }
+
+function showProduct(id) {
+  const sections = document.querySelectorAll('.product-item');
+  sections.forEach(section => section.style.display = 'none');
+
+  document.getElementById(`product-${id}`).style.display = 'block';
+}

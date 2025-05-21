@@ -52,7 +52,7 @@
 
     .sidebar li strong {
       background-color: transparent;
-      cursor: default;
+      cursor: pointer;
     }
 
     .product-display {
@@ -109,6 +109,9 @@
 </head>
 <body>
   <header>
+
+
+
     <h1>产品中心</h1>
     <nav>
       <a href="index.html">首页</a>
@@ -121,12 +124,12 @@
   <div class="container">
     <div class="sidebar">
       <h2>产品分类</h2>
-      <ul>
-        <li><strong>床垫</strong></li>
+     <ul>
+        <li onclick="showCategory('mattress')"><strong>床垫</strong></li>
         <li onclick="showProduct('a')">IMPERIAL</li>
         <li onclick="showProduct('b')">DRAGON CLOUD</li>
         <li onclick="showProduct('c')">ZEN</li>
-        <li><strong>床架</strong></li>
+        <li onclick="showCategory('frame')"><strong>床架</strong></li>
         <li onclick="showProduct('frame180')">长度180</li>
         <li onclick="showProduct('frame190')">长度190</li>
         <li onclick="showProduct('frame200')">长度200</li>
@@ -135,13 +138,26 @@
 
   <div class="product-display">
 
+   <!-- ✅ 床垫总览 -->
+      <div id="category-mattress" class="product-item">
+        <h2>床垫</h2>
+        <div class="product-description">
+          我们的床垫系列融合舒适性与支撑性，适用于各种睡眠需求。每款产品都经过人体工学优化，提升睡眠品质。
+        </div>
+
+        <div class="product-images">
+           <img src="images/chuangdian 01.jpg" alt="床垫 01"><br>
+           <img src="images/chuangdian 02.jpg" alt="床垫 02"><br>
+           <img src="images/chuangdian 03.jpg" alt="床垫 03"><br>
+        </div>
+
+      </div>
+
+
   <!-- 床垫产品 -->
   <div id="product-a" class="product-item active">
     <h2><span class="brand-tag imperial">IMPERIAL</span> 系列</h2>
-    <div class="product-images">
-      <img src="images/chanpintupian00.jpg" alt="IMPERIAL 图1">
-      <img src="images/chanpintupian01.jpg" alt="IMPERIAL 图2">
-    </div>
+  
     <div class="product-description">
       <p>IMPERIAL</p>
       <p>高硬度支撑，强力承托。<br>
@@ -152,17 +168,20 @@
     <div>
       <span class="spec-card">90</span><span class="spec-card">135</span><span class="spec-card">150</span>
       <span class="spec-card">160</span><span class="spec-card">180</span><span class="spec-card">200</span>
+
     </div>
+      <div class="product-images">
+      <img src="images/IMPERIAL 01.jpg" alt="IMPERIAL 图1"><br>
+    </div>
+
   </div>
+
 
   <div id="product-b" class="product-item">
     <h2><span class="brand-tag dragon">DRAGON CLOUD</span> 系列</h2>
-    <div class="product-images">
-      <img src="images/chanpintupian02.jpg" alt="DRAGON CLOUD 图1">
-    </div>
-    <div class="product-description">
- 
+  
 
+    <div class="product-description">
       <p>DRAGON CLOUD</p>
       <p>偏硬支撑，稳固安心。</p>
       <p>该系列主打支撑与透气平衡，采用高密度记忆泡沫，使您享受奢华的睡眠体验。</p>
@@ -173,13 +192,17 @@
       <span class="spec-card">90</span><span class="spec-card">135</span><span class="spec-card">150</span>
       <span class="spec-card">160</span><span class="spec-card">180</span><span class="spec-card">200</span>
     </div>
+
+      <div class="product-images">
+      <img src="images/DRAGON CLOUD 01.jpg" alt="DRAGON CLOUD 图1">
+    </div>
+
   </div>
+
 
   <div id="product-c" class="product-item">
     <h2><span class="brand-tag zen">ZEN</span> 系列</h2>
-    <div class="product-images">
-      <img src="images/chanpintupian01.jpg" alt="ZEN 图1">
-    </div>
+    
     <div class="product-description">
       <p>ZEN</p>
       <p>软硬适中，舒适平衡。<br>
@@ -192,46 +215,82 @@
       <span class="spec-card">90</span><span class="spec-card">135</span><span class="spec-card">150</span>
       <span class="spec-card">160</span><span class="spec-card">180</span><span class="spec-card">200</span>
     </div>
+
+    <div class="product-images">
+      <img src="images/ZEN 01.jpg" alt="ZEN 图1">
+    </div>
+
   </div>
+
+
+
+   <!-- ✅ 床架总览 -->
+      <div id="category-frame" class="product-item">
+        <h2>床架</h2>
+        <div class="product-description">
+          适用于大多数卧室格局，这款床架在舒适与空间利用之间取得完美平衡，让每一寸卧室都尽显从容与品质。
+        </div>
+
+        <div class="product-images">
+           <img src="images/.jpg" alt="图片"><br>
+        </div>
+
+      </div>
+
+
 
   <!-- 床架产品 -->
   <div id="product-frame180" class="product-item">
     <h2><span class="brand-tag frame">床架</span> - 长度 180 CM</h2>
-    <div class="product-images">
-      <img src="images/frame180.jpg" alt="床架180CM 图1">
-    </div>
+   
     <div class="product-description">
-      <p>适用于小型卧室或儿童房的紧凑型设计床架。</p>
+      <p>适合标准卧室使用的常规床架，兼顾舒适与空间利用。</p>
+      <p>高度：33CM</p>
+      
     </div>
+
+
     <div>
       <span class="spec-card">90</span><span class="spec-card">105</span><span class="spec-card">135</span>
       <span class="spec-card">150</span><span class="spec-card">160</span><span class="spec-card">150 2T</span>
       <span class="spec-card">160 2T</span><span class="spec-card">180 2T</span>
     </div>
+
+
+ <div class="product-images">
+      <img src="images/frame180.jpg" alt="床架180CM 图1">
+    </div>
+
+
   </div>
 
   <div id="product-frame190" class="product-item">
     <h2><span class="brand-tag frame">床架</span> - 长度 190 CM</h2>
+    
+
+    <div class="product-description">
+      <p>适合标准卧室使用的常规床架，兼顾舒适与空间利用。</p>
+      <p>高度：33CM</p>
+    </div>
+    <div>
+      <span class="spec-card">90</span><span class="spec-card">105</span><span class="spec-card">135</span>
+      <span class="spec-card">150</span><span class="spec-card">160</span><span class="spec-card">150 2T</span>
+      <span class="spec-card">160 2T</span><span class="spec-card">180 2T</span>
+    </div>
+
+
     <div class="product-images">
       <img src="images/frame190.jpg" alt="床架190CM 图1">
     </div>
-    <div class="product-description">
-      <p>适合标准卧室使用的常规床架，兼顾舒适与空间利用。</p>
-    </div>
-    <div>
-      <span class="spec-card">90</span><span class="spec-card">105</span><span class="spec-card">135</span>
-      <span class="spec-card">150</span><span class="spec-card">160</span><span class="spec-card">150 2T</span>
-      <span class="spec-card">160 2T</span><span class="spec-card">180 2T</span>
-    </div>
-  </div>
+
+   </div>
 
   <div id="product-frame200" class="product-item">
     <h2><span class="brand-tag frame">床架</span> - 长度 200 CM</h2>
-    <div class="product-images">
-      <img src="images/frame200.jpg" alt="床架200CM 图1">
-    </div>
+   
     <div class="product-description">
-      <p>加长床架设计，适合高个子或追求更大睡眠空间的用户。</p>
+      <p>适合标准卧室使用的常规床架，兼顾舒适与空间利用。</p>
+      <p>高度：33CM</p>
     </div>
     <div>
       <span class="spec-card">90</span><span class="spec-card">105</span><span class="spec-card">135</span>
@@ -240,10 +299,14 @@
     </div>
   </div>
 
+
+   <div class="product-images">
+      <img src="images/frame200.jpg" alt="床架200CM 图1">
+    </div>
+
 </div>
 
-
-  <footer>
+ <footer>
     <p>&copy; 2025 IMPERIAL</p>
   </footer>
 
@@ -252,6 +315,13 @@
       const items = document.querySelectorAll('.product-item');
       items.forEach(item => item.classList.remove('active'));
       const selected = document.getElementById('product-' + id);
+      if (selected) selected.classList.add('active');
+    }
+
+    function showCategory(category) {
+      const items = document.querySelectorAll('.product-item');
+      items.forEach(item => item.classList.remove('active'));
+      const selected = document.getElementById('category-' + category);
       if (selected) selected.classList.add('active');
     }
   </script>
