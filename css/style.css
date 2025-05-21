@@ -167,7 +167,8 @@ main {
   flex-wrap: nowrap;
   gap: 16px;
   padding: 20px;
-  scroll-snap-type: x mandatory; /* 可选，增加滑动体验 */
+  scroll-snap-type: x mandatory; 
+  -webkit-overflow-scrolling: touch;
 }
 
 .product-item {
