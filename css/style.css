@@ -22,6 +22,18 @@ footer {
   z-index: 999;
 }
 
+/* ✅ 全局允许横向滚动 */
+html, body {
+  width: 100%;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ✅ 确保不强行隐藏横向内容 */
+* {
+  box-sizing: border-box;
+}
+
 
 nav a {
   margin: 0 1em;
