@@ -5,11 +5,23 @@ body {
   padding: 0;
 }
 
-header, footer {
-  background-color: #f8f8f8;
-  padding: 1em;
-  text-align: center;
+header {
+  background-color: #f2f2f2;
+  padding: 5px;
+  text-align: bottom;
 }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 10px;
+  z-index: 999;
+}
+
 
 nav a {
   margin: 0 1em;
@@ -106,7 +118,7 @@ main {
   font-size: 16px;
 }
 .IMPERIAL 01 img,
-.DRAGON CLOUD 01 img,
+.DRAGONCLOUD 01 img,
 .ZEN 01 img {
   width: 100%;
   max-width: 600px;
@@ -114,3 +126,26 @@ main {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+.product-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.product-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.CHUANGJIA 03 img,{4 
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
