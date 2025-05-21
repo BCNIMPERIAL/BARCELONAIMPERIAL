@@ -160,3 +160,22 @@ main {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+.product-display {
+  display: flex;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  gap: 16px;
+  padding: 20px;
+  scroll-snap-type: x mandatory; /* 可选，增加滑动体验 */
+}
+
+.product-item {
+  flex: 0 0 auto; /* 防止自动换行 */
+  width: 80%;     /* 可调：控制每个卡片的宽度 */
+  max-width: 300px;
+  scroll-snap-align: start; /* 可选 */
+}
+
+
+
